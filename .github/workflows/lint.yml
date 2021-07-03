@@ -25,6 +25,12 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      # Runs a single command using the runners shell
+      # Runs a set of commands using the runners shell
       - name: Run flake8 (by Wemake Python Styleguide) linter check
-        run: make lint
+        run: |
+          pip install poetry
+          make install
+          make build
+          make publish
+          make pkg-inst
+          make lint
