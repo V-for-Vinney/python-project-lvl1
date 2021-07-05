@@ -2,7 +2,7 @@ import prompt
 import random
 
 
-def even_game(user_name: str):
+def run_even_game(user_name: str):
     print('Answer "yes" if the number is even, otherwise answer "no".')
     frags = 0
     while frags < 3:

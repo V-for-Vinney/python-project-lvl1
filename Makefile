@@ -1,17 +1,22 @@
 install:
-	poetry install
+	python3 -m poetry install
 
 bg:
-	poetry run brain-games
+	python3 -m poetry run brain-games
 
 build:
-	poetry build
+	python3 -m poetry build
 
 publish:
-	poetry publish --dry-run
+	python3 -m poetry publish --dry-run
 
 pkg-inst:
 	python3 -m pip install --user --force-reinstall dist/*.whl
 
 lint:
-	poetry run flake8 brain_games
+	python3 -m poetry run flake8 brain_games
+
+update:
+	make install
+	make build
+	make pkg-inst
