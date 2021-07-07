@@ -17,6 +17,7 @@ lint:
 	python3 -m poetry run flake8 brain_games
 
 update:
+	python3 -m poetry update
 	make install
 	make build
 	make pkg-inst
