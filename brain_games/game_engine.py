@@ -1,4 +1,5 @@
 from typing import Callable
+from brain_games.cli import welcome_user
 
 import prompt
 
@@ -6,10 +7,12 @@ MAX_FRAGS = 3
 
 
 def start_game(
-    user_name: str,
+    intro: str,
     make_puzzle: Callable,
     make_solution: Callable,
 ):
+    user_name = welcome_user()
+    print(intro)
     for _ in range(MAX_FRAGS):
         puzzle = make_puzzle()
         print(f'Question: {str(puzzle)}')
