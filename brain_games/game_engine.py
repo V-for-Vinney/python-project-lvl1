@@ -1,7 +1,7 @@
 from typing import Callable
-from brain_games.cli import welcome_user
 
 import prompt
+from brain_games.cli import welcome_user
 
 MAX_FRAGS = 3
 
